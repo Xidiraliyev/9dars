@@ -11,7 +11,7 @@ function Retsepts() {
   } = useFetch("http://localhost:3000/recipes");
   return (
     <>
-    <h1 className="text-center text-lg">Retsepts</h1>
+   <h2 class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-2xl text-center font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Retsepts</h2>
       {recipes && (
         <div className="max-w-screen-xl flex gap-6 flex-wrap items-center justify-between mx-auto p-4">
           {recipes.map((recipe) => {
@@ -21,7 +21,7 @@ function Retsepts() {
                 class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-500 "
               >
                 <a href="#">
-                  <img class="rounded-t-lg" src={CardImg} alt="" />
+                  <img class="rounded-t-lg" src={recipe.image} alt="" />
                 </a>
                 <div class="p-5">
                   <a href="#">
